@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Memory Match Game</title>
+  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="readyOverlay" class="overlay">
+  <div class="overlay-content">
+    <h2>Are you ready to play?</h2>
+    <button id="readyButton" class="game-button">Ready</button>
+  </div>
+</div>
+<body>
+ <div class="game-container">
+  <div class="game-title">
+    <img src="https://squishstudios.net/wp-content/uploads/2018/03/Memory_Match_Catch_Logo-copy.png"></div>
+    <i id="muteButton" class="fas fa-volume-up game-icon"></i>
+  <div id="gameBoard" class="game-board">
+    <div class="card" data-card-value="card1">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz3gvAFML0Y-j1Pc52qU85mZBTy7bC8f9VRA&usqp=CAU" alt="Card 1"></div>
+    </div>
+    <div class="card" data-card-value="card1">
+      <div class="card-front"></div>
+      <div class="card-back">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz3gvAFML0Y-j1Pc52qU85mZBTy7bC8f9VRA&usqp=CAU" alt="Card 1"></div>
+    </div>
+    <div class="card" data-card-value="card2">
+      <div class="card-front"></div>
+      <div class="card-back">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYG0p5MGufoRIuE5VuXb_Kg0mifsuIHfwPA&usqp=CAU" alt="Card 2"></div>
+    </div>
+    <div class="card" data-card-value="card2">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYG0p5MGufoRIuE5VuXb_Kg0mifsuIHfwPA&usqp=CAU" alt="Card 2"></div>
+    </div>
+    <div class="card" data-card-value="card3">
+      <div class="card-front"></div>
+      <div class="card-back">      
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFzAeUa6itVXQsHS55TFh971G6LSIlhXyOjA&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card3">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFzAeUa6itVXQsHS55TFh971G6LSIlhXyOjA&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card4">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRuIXEcRr2J5MlUgyThsDVT1IWYtoKFfjkGw&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card4">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRuIXEcRr2J5MlUgyThsDVT1IWYtoKFfjkGw&usqp=CAU"></div>    
+    </div>
+    <div class="card" data-card-value="card5">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWaRCcf2x9nq8qiHcH7mi-i6YyoqY8jRm34A&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card5">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWaRCcf2x9nq8qiHcH7mi-i6YyoqY8jRm34A&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card6">
+      <div class="card-front"></div>
+      <div class="card-back"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyUhWSGgpWpvg9ie7UorM52cTrt_OU6HhALg&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card6">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyUhWSGgpWpvg9ie7UorM52cTrt_OU6HhALg&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card7">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxlCZLxzhSB41WZ82_S-fj3P20lBv1xQTIWhut4coJOqGr3Jz-YemgGWaY3ymIDu5GRQ&usqp=CAU"></div>
+      </div>
+    <div class="card" data-card-value="card7">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxlCZLxzhSB41WZ82_S-fj3P20lBv1xQTIWhut4coJOqGr3Jz-YemgGWaY3ymIDu5GRQ&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card8">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFkL-q2F9i7jjRc8ZeSEBpUw9YRHQzrwpr2g&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card8">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFkL-q2F9i7jjRc8ZeSEBpUw9YRHQzrwpr2g&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card9">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSamwNXqpheySd3JdfaM51xcJkHp9jLoxsF-SN0NuEjFPAnzLdZkdNh10xMdu9rKdDVOp4&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card9">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSamwNXqpheySd3JdfaM51xcJkHp9jLoxsF-SN0NuEjFPAnzLdZkdNh10xMdu9rKdDVOp4&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card10">
+      <div class="card-front"></div>
+      <div class="card-back"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpULWbEjTqFUbPD1O3y7oMp61MjET3iNPsg&usqp=CAU"></div>
+    </div>
+    <div class="card" data-card-value="card10">
+      <div class="card-front"></div>
+      <div class="card-back">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpULWbEjTqFUbPD1O3y7oMp61MjET3iNPsg&usqp=CAU"></div>
+    </div>
+    <!-- Add more cards -->
+  </div>
+ </div>
+  <div class="button-container">
+    <button id="resetButton" class="game-button">Reset Game</button>
+    <button id="showAllButton" class="game-button">Show All</button>
+    <div class="timer-container">
+      <span id="timer">0:00</span>
+    </div>
+  </div>
+  <div id="timeUpModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Time is up!</h2>
+        <button class="game-button" id="tryAgainButton">Try Again</button>
+    </div>
+</div>
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>You succeed!</h2>
+        <button class="game-button" id="playAgainButton">Play Again</button>
+    </div>
+</div>
+<audio id="backgroundMusic" loop>
+    <source src="https://scummbar.com/mi2/MI1-CD/12%20-%20The%20Fettucini%20Brothers.mp3" type="audio/mpeg">
+</audio>
+<audio id="flipSound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/250758/noammo.mp3" preload="auto"></audio>
+<audio id="matchSound" src="https://freesound.org/data/previews/263/263132_2064400-lq.mp3" preload="auto"></audio>
+<audio id="winSound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/187048/clickisland.mp3" preload="auto"></audio>
+<audio id="timeUpSound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/250758/3.mp3" preload="auto"></audio>
+</body>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/mojs/0.288.1/mo.min.js'></script>
+<script src='https://cdn.jsdelivr.net/mojs-player/0.43.15/mojs-player.min.js'></script>
+<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
